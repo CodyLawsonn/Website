@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home</title>
+		<link rel="stylesheet" href="../CSS/master.css">
+		<a href="../HTML/home.html">
+		<img id="logo" src="../IMAGES/Logo.png">
+		</a>
+		<div class="navbar">
+		<a href="../html/home.html">Home</a>
+		<div class="dropdown">
+			<button class="dropbtn">Catalogue 
+			  <i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="../PHP/catalogue.php">Full Catalogue</a>
+				<a id="LogIn" href="../PHP/LogIn.php">Admin Log In</a>
+			</div>
+		  </div> 
+		  <a href="../html/About.html">About</a>
+		  <a href="../html/Contact.html">Contact</a>
+		</div>
+	</head>
+
+	<body>
+	<br>
+	<h2>Contact Us</h2>
+	<div class="formStyle">
+
+		<form id="styleForm" method="POST" action="../PHP/contact.php">
+			First Name:<input type="text" name="fName"> <br>
+			Last Name: <input type="text" name="lName"> <br>
+			Email: <input type="text" name="email"> <br>
+			Phone Number: <input type="text" name="pNumber"> <br>
+			Message: <input type="text" name="Desc"> <br>
+			<input type="submit" name="search" value="Search">
+		</form>
+	</div>
+	</body>
+
+</html>

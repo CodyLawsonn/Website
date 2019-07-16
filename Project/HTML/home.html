@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home</title>
+		<link rel="stylesheet" href="../CSS/master.css">
+		<a href="../HTML/home.html">
+		<img id="logo" src="../IMAGES/Logo.png">
+		</a>
+		<div class="navbar">
+		<a href="../html/home.html">Home</a>
+		<div class="dropdown">
+			<button class="dropbtn">Catalogue 
+			  <i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="../PHP/catalogue.php">Full Catalogue</a>
+				<a id="LogIn" href="../PHP/LogIn.php">Admin Log In</a>
+			</div>
+		  </div> 
+		  <a href="../html/About.html">About</a>
+		  <a href="../html/Contact.html">Contact</a>
+		</div>
+	</head>
+	<br>
+<body>
+<div class="slideshow-container">
+
+  <div class="mySlides" div style="text-align: center">
+    <img src="../IMAGES/airBrake1.png" height="500px" width="60%">
+  </div>
+
+  <div class="mySlides" div style="text-align: center">
+    <img src="../IMAGES/airBrake2.png" height="500px" width="80%">
+  </div>
+
+  <div class="mySlides" div style="text-align: center">
+    <img src="../IMAGES/airBrake3.png" height="500px" width="80%">
+  </div>
+   
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<div class ="searchForm">
+<form method="POST" action="../PHP/search.php">
+	Search for a part number: <input type="text" name="q">
+	<input type="submit" name="search" value="Search">
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>Welcome to NewCo.</p>
+<br><br>
+<p>
+Please have a look around the webiste. 
+A catalogue of all our parts are located inside the full catalogue page in the drop down of the navigation bar, or use 
+the product search bar on the top right of the home screen.
+We stock a range of porducts and are looking to expand our range. Stocking brands like Wabco and Knorr Bremse along with
+our own reconditioned parts. Only the best conditioned parts come from us. We are an account based retailer so orders can not
+be made on the website. 
+<br><br>
+If you would like to make an order with us please fill out the contact form on the contact page or please feel 
+free to ring us on 01617898555.
+</p>
+		
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>
